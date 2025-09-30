@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Menu-Makers Calculator",
+			"type": "shell",
+			"command": "start",
+			"args": [
+				"index.html"
+			],
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Makers Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Menu-Makers Calculator</h1>
+    <p class="subtitle">Calculate costs and discounts with ease</p>
+    
+    <div class="container">
+        <div class="calculator-wrapper">
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" readonly>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn btn-clear" data-action="clear">C</button>
+                    <button class="btn btn-clear" data-action="clear-entry">CE</button>
+                    <button class="btn btn-operator" data-action="backspace">⌫</button>
+                    <button class="btn btn-operator" data-operation="/">/</button>
+                    
+                    <button class="btn btn-number" data-number="7">7</button>
+                    <button class="btn btn-number" data-number="8">8</button>
+                    <button class="btn btn-number" data-number="9">9</button>
+                    <button class="btn btn-operator" data-operation="*">×</button>
+                    
+                    <button class="btn btn-number" data-number="4">4</button>
+                    <button class="btn btn-number" data-number="5">5</button>
+                    <button class="btn btn-number" data-number="6">6</button>
+                    <button class="btn btn-operator" data-operation="-">-</button>
+                    
+                    <button class="btn btn-number" data-number="1">1</button>
+                    <button class="btn btn-number" data-number="2">2</button>
+                    <button class="btn btn-number" data-number="3">3</button>
+                    <button class="btn btn-operator" data-operation="+">+</button>
+                    
+                    <button class="btn btn-number" data-number="0">0</button>
+                    <button class="btn btn-number" data-action="decimal">.</button>
+                    <button class="btn btn-equals btn-equals-wide" data-action="equals">=</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="special-functions">
+                <h3>Menu-Makers Special Functions</h3>
+                <div class="function-buttons">
+                    <button class="btn btn-special" data-special="tax" title="Calculate tax (13%)">Tax 13%</button>
+                    <button class="btn btn-special" data-special="discount" title="Apply discount (15%)">Discount 15%</button>
+                    <button class="btn btn-special" data-special="tip" title="Calculate tip (18%)">Tip 18%</button>
+                    <button class="btn btn-special" data-special="total" title="Add tax and tip">Total + Tax+ Tip</button>
+                </div>
+            </div>
+            
+            <div class="history">
+                <h3>Calculation History</h3>
+                <ul id="history-list"></ul>
+                <button class="btn btn-clear" id="clear-history">Clear History</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/model/CalculatorModel.js"></script>
+    <script src="js/view/CalculatorView.js"></script>
+    <script src="js/controller/CalculatorController.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
